@@ -25,12 +25,12 @@ public class CamelSalesforceupdatesinkSinkConnectorConfig
         extends
             CamelSinkConnectorConfig {
 
-    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_NAME_CONF = "camel.kamelet.salesforce-update-sink.sObjectName";
-    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_NAME_DOC = "The type of the Salesforce object. Required if using a key-value pair. Example: Contact";
-    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_NAME_DEFAULT = null;
-    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_ID_CONF = "camel.kamelet.salesforce-update-sink.sObjectId";
-    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_ID_DOC = "The ID of the Salesforce object. Required if using a key-value pair.";
-    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_ID_DEFAULT = null;
+    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_PATH_CONF = "camel.kamelet.salesforce-update-sink.rawPath";
+    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_PATH_DOC = "The path of the Salesforce request.";
+    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_PATH_DEFAULT = null;
+    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_METHOD_CONF = "camel.kamelet.salesforce-update-sink.rawMethod";
+    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_METHOD_DOC = "The method of the Salesforce request.";
+    public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_METHOD_DEFAULT = null;
     public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_LOGIN_URL_CONF = "camel.kamelet.salesforce-update-sink.loginUrl";
     public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_LOGIN_URL_DOC = "The Salesforce instance login URL.";
     public static final String CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_LOGIN_URL_DEFAULT = "https://login.salesforce.com";
@@ -60,8 +60,8 @@ public class CamelSalesforceupdatesinkSinkConnectorConfig
 
     public static ConfigDef conf() {
         ConfigDef conf = new ConfigDef(CamelSinkConnectorConfig.conf());
-        conf.define(CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_NAME_CONF, ConfigDef.Type.STRING, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_NAME_DEFAULT, ConfigDef.Importance.HIGH, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_NAME_DOC);
-        conf.define(CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_ID_CONF, ConfigDef.Type.STRING, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_ID_DEFAULT, ConfigDef.Importance.HIGH, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_SOBJECT_ID_DOC);
+        conf.define(CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_PATH_CONF, ConfigDef.Type.STRING, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_PATH_DEFAULT, ConfigDef.Importance.HIGH, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_PATH_DOC);
+        conf.define(CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_METHOD_CONF, ConfigDef.Type.STRING, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_METHOD_DEFAULT, ConfigDef.Importance.HIGH, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_RAW_METHOD_DOC);
         conf.define(CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_LOGIN_URL_CONF, ConfigDef.Type.STRING, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_LOGIN_URL_DEFAULT, ConfigDef.Importance.MEDIUM, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_LOGIN_URL_DOC);
         conf.define(CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_CLIENT_ID_CONF, ConfigDef.Type.STRING, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_CLIENT_ID_DEFAULT, ConfigDef.Importance.HIGH, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_CLIENT_ID_DOC);
         conf.define(CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_CLIENT_SECRET_CONF, ConfigDef.Type.PASSWORD, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_CLIENT_SECRET_DEFAULT, ConfigDef.Importance.HIGH, CAMEL_SINK_SALESFORCEUPDATESINK_KAMELET_CLIENT_SECRET_DOC);

@@ -9,15 +9,15 @@
 		"description": "Update an object in Salesforce. \n\nThe body received must contain a JSON key-value pair for each property to update, for example: `{ \"Phone\": \"1234567890\", \"Name\": \"Antonia\" }`\n\nThe body received must include the `sObjectName` and `sObjectId` properties."
 	},
 	"properties": {
-		"camel.kamelet.salesforce-update-sink.sObjectName": {
-			"name": "camel.kamelet.salesforce-update-sink.sObjectName",
-			"description": "The type of the Salesforce object. Required if using a key-value pair. Example: Contact",
+		"camel.kamelet.salesforce-update-sink.rawPath": {
+			"name": "camel.kamelet.salesforce-update-sink.rawPath",
+			"description": "The path of the Salesforce request.",
 			"priority": "HIGH",
 			"required": "true"
 		},
-		"camel.kamelet.salesforce-update-sink.sObjectId": {
-			"name": "camel.kamelet.salesforce-update-sink.sObjectId",
-			"description": "The ID of the Salesforce object. Required if using a key-value pair.",
+		"camel.kamelet.salesforce-update-sink.rawMethod": {
+			"name": "camel.kamelet.salesforce-update-sink.rawMethod",
+			"description": "The method of the Salesforce request.",
 			"priority": "HIGH",
 			"required": "true"
 		},
